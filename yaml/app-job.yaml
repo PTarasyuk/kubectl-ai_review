@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: my-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: my-app
+        image: <image-name>
+        volumeMounts:
+        - name: volume1
+          mountPath: /path/to/mount1
+          readOnly: false
+        - name: volume2
+          mountPath: /path/to/mount2
+          readOnly: true
+      volumes:
+      - name: volume1
+        <volume-details1>
+      - name: volume2
+        <volume-details2>
