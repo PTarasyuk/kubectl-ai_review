@@ -17,6 +17,4 @@ spec:
           readOnly: true
       volumes:
       - name: volume1
-        <volume-details1>
       - name: volume2
-        <volume-details2>
